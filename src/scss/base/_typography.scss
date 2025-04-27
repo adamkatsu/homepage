@@ -1,0 +1,112 @@
+@use "../abstracts" as *;
+
+h1 {
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  line-height: 180%;
+  color: #ACACAC;
+}
+.txt-name {
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: -0.02em;
+  font-size: 32px;
+  font-weight: 400;
+  color: #1DB0FF;
+}
+.txt-regular {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ACACAC;
+}
+.txt-link {
+  font-size: 18px;
+  color: #1DB0FF;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    background-color: #1DB0FF;
+    bottom: -2px;
+    left: 0%;
+    transition: all .1s ease;
+  }
+  &:hover {
+    color: #FFFFFF;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 40px rgba(255, 255, 255, 0.5));
+    transition: all .3s ease;
+
+    &::after {
+      bottom: -4px;
+      color: #FFFFFF;
+      width: 102%;
+      height: 2px;
+      left: -1%;
+      transition: all .1s ease;
+    }
+  }
+}
+.txt-slots {
+  font-size: 18px;
+  color: #FFF;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.underline {
+  text-decoration: underline;
+}
+.txt-center {
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  h1 {
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 6.2vw;
+  }
+  .txt-name {
+    font-size: 24px;
+  }
+}
+@media(max-width: 480px) {
+  .txt-name {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .txt-link {
+    font-size: 14px;
+  }
+  .cta-title {
+    font-size: 14px;
+  }
+  .txt-slots {
+    font-size: 16px;
+  }
+}
