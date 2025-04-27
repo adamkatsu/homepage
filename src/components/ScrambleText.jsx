@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 const letters = "!@#$%^&*()_+-={}|/<>";
 
-export default function ScrambleText({ text, intervalDelay = 5000 }) {
+export default function ScrambleText({ text, intervalDelay = 10000 }) {
   const [displayedText, setDisplayedText] = useState(text);
   const intervalRef = useRef(null);
   const animationTimeoutRef = useRef(null);
